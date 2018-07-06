@@ -34,7 +34,9 @@ get "/tracks/:id" do
   erb :track_page
 end
 
-# Then:
-# 1. Create an artist page with all the albums. Display genres as well
-# 2. Create an album pages with all the tracks
-# 3. Create a track page with all the track info
+get "/random" do
+  @random_all = random_track_id
+  @random_rock = random_track_id("Rock")
+  @random_classical = random_track_id("Classical")
+  erb :random
+end
