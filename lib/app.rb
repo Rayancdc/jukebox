@@ -35,6 +35,10 @@ get "/tracks/:id" do
   erb :track_page
 end
 
+get "/genres/rock" do
+  @artists = display_genre("Rock")
+  erb :genre_page
+end
 # Then:
 # 1. Create an artist page with all the albums. Display genres as well
 # 2. Create an album pages with all the tracks
