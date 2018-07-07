@@ -5,7 +5,7 @@ require_relative "helper.rb"
 require_relative "scrapper.rb"
 
 DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), 'db/jukebox.sqlite'))
-set :port, 9494
+set :port, 4949
 get "/" do
   @artists = display_all
   # TODO: Gather all artists to be displayed on home page
@@ -14,6 +14,7 @@ end
 
 get "/artists/:id" do
   @albums = display_albums(params[:id].to_i)
+  @artist = find_artist(params[:id].to_i)
   # TODO: Gather all artists to be displayed on home page
   erb :artist_page
 end
