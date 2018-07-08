@@ -10,6 +10,15 @@ def display_all
   DB.execute(query)
 end
 
+def find_artist(id)
+  query = <<-SQL
+    SELECT artists.name
+    FROM artists
+    WHERE artists.id = ?
+  SQL
+  DB.execute(query, id)
+end
+
 def display_albums(id)
   query = <<-SQL
     SELECT albums.title as alb, albums.id

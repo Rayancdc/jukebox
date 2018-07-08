@@ -1,3 +1,76 @@
-body {
-  font-family: Helvetica, sans-serif;
+html {
+  height: 100%;
+  margin: 0;
 }
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #e1e1e1;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+h1 {
+  padding-top: 1em;
+  font-size: 400%;
+  font-family: Helvetica, sans-serif;
+  color: #433e36;
+}
+h2 {
+  font-size: 250%;
+  font-weight: bold;
+  color: #70685b;
+  margin: 2em auto;
+}
+a {
+  color: #433e36;
+  font-size: 150%;
+}
+a:hover {
+  text-shadow: 1px 1px 5px #c5c2bd;
+  color: #433e36;
+  text-decoration: none;
+}
+.navbar-brand {
+  color: #433e36;
+  font-weight: bold;
+  margin-right: 2.5%;
+  margin-left: 1%;
+}
+.form-control:focus {
+  box-shadow: 1px 1px 5px #c5c2bd;
+  border: 1px solid #70685b;
+}
+.nav-link {
+  margin-right: 20px;
+}
+#banner{
+  text-align: center;
+  background-image: url("https://images.pexels.com/photos/21088/music-record-player-b-w-black-and-white-21088.jpg?cs=srgb&dl=black-and-white-close-up-view-jukebox-21088.jpg&fm=jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 60%;
+  position: relative;
+  background-repeat: no-repeat;
+  height: 85%;
+  width: 100%;
+  color: white;
+  text-shadow: 1px 1px 20px #70685b;
+  font-family: Helvetica, sans-serif;
+  border-bottom: 5px solid #70685b;
+}
+#banner h1 {
+  color: white;
+}
+#banner div {
+  position: absolute;
+  top: 30%;
+  width: 100%
+}
+#banner h2 {
+  font-size: 300%;
+  margin: 0;
+  color: #e1e1e1;
+}
+

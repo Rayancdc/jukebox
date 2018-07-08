@@ -1,6 +1,14 @@
+<div id = "banner">
+  <div>
+    <h1>Jukebox</h1>
+    <h2>Your Library of Entertainment</h2>
+  </div>
+</div>
+<div>
 <h2>Artists</h2>
 <ul>
 <% @artists.each do |artist| %>
   <li><a href = "/artists/<%= artist[1] %>" ><%= artist[0] %></li></a>
  <% end %>
 </ul>
+</div>
