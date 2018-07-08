@@ -1,0 +1,8 @@
+<h1><%= @artists_f_genre[0][0] %></h1>
+<h2>Artists</h2>
+<ul>
+  <li><span><a href="/tracks/<%= random_track_id(@artists_f_genre[0][0]) %>">Random <%= @artists_f_genre[0][0] %> Song!</a></span></li>
+<% @artists_f_genre.each do |artist| %>
+  <li><a href = "/artists/ <%= artist[3] %>" ><%= artist[1] %> </li></a>
+ <% end %>
+</ul>

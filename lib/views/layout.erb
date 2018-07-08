@@ -21,13 +21,13 @@
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Rock</a>
+            <a class="nav-link" href="/genres/ <%= get_genre_id('Rock') %>">Rock</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Classic</a>
+            <a class="nav-link" href="/genres/ <%= get_genre_id('Classical') %>">Classical</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Random Song</a>
+            <a class="nav-link" href="/tracks/<%= random_track_id %>">Random Song</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

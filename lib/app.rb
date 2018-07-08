@@ -5,7 +5,7 @@ require_relative "helper.rb"
 require_relative "scrapper.rb"
 
 DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), 'db/jukebox.sqlite'))
-set :port, 4949
+set :port, 1111
 get "/" do
   @artists = display_all
   # TODO: Gather all artists to be displayed on home page
@@ -33,6 +33,12 @@ get "/tracks/:id" do
   # @test = @track[0][0].to_s
   # erb :test
   erb :track_page
+end
+
+get "/genres/:id" do
+  @artists_f_genre = all_from_genre(params[:id].to_i)
+
+  erb :genre_page
 end
 
 get "/random" do
