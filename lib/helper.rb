@@ -48,3 +48,21 @@ def track_from_id(track_id)
   SQL
   DB.execute(query)
 end
+
+def random_track_id(genre = nil)
+  if genre
+    query = <<-SQL
+      SELECT tracks.id
+      FROM tracks
+      JOIN genres ON tracks.genre_id = genres.id
+      WHERE genres.name = "#{genre}"
+    SQL
+  else
+    query = <<-SQL
+      SELECT tracks.id
+      FROM tracks
+    SQL
+  end
+  data = DB.execute(query)
+  random_id = data.sample[0]
+end
