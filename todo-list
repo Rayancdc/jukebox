@@ -1,5 +1,11 @@
-TODO 
+TODO
   optimize scrapping using artist name
   correct playlist bug by verifying if the video is a playlist
   fix special characters bug
   add last-fm api with album covers
+  improve search
+  add not found page
+
+FEATURES
+  - Playlists (User can add a playlist of musics to our database. Everyone can see the created playlists)
+    - Playlists page with the most rated playlists
