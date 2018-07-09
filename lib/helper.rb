@@ -49,6 +49,28 @@ def track_from_id(track_id)
   DB.execute(query)
 end
 
+def all_from_genre(genre_id)
+  query = <<-SQL
+    SELECT genres.name, artists.name, genres.id, artists.id
+    FROM artists
+    JOIN albums ON albums.artist_id = artists.id
+    JOIN tracks ON tracks.album_id = albums.id
+    JOIN genres ON tracks.genre_id = genres.id
+    WHERE genres.id = "#{genre_id}"
+    GROUP BY artists.name
+  SQL
+  DB.execute(query)
+end
+
+def get_genre_id(genre_name)
+  query = <<-SQL
+    SELECT genres.id
+    FROM genres
+    WHERE genres.name = "#{genre_name}"
+  SQL
+  DB.execute(query).join
+end
+
 def random_track_id(genre = nil)
   if genre
     query = <<-SQL

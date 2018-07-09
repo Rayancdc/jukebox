@@ -12,7 +12,7 @@ body {
   text-align: center;
 }
 h1 {
-  padding-top: 1em;
+  padding-top: 2em;
   font-size: 400%;
   font-family: Helvetica, sans-serif;
   color: #433e36;
@@ -31,6 +31,9 @@ a:hover {
   text-shadow: 1px 1px 5px #c5c2bd;
   color: #433e36;
   text-decoration: none;
+}
+span {
+  font-size: 150%;
 }
 .navbar-brand {
   color: #433e36;
@@ -62,6 +65,7 @@ a:hover {
 }
 #banner h1 {
   color: white;
+  padding-top: 1em;
 }
 #banner div {
   position: absolute;
