@@ -47,3 +47,17 @@ get "/random" do
   @random_classical = random_track_id("Classical")
   erb :random
 end
+
+post '/search' do
+  search = params["search"].to_s
+  artist_id = find_artist_by_name(search)
+  track_id = find_track_by_name(search) unless artist_id
+  if artist_id
+    string = "/artists/#{artist_id[0]}"
+  elsif track_id
+    string = "/tracks/#{track_id[0]}"
+  else
+    string = "/" # Add NOT FOUND page
+  end
+  redirect string
+end
