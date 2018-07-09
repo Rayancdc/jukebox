@@ -19,6 +19,24 @@ def find_artist(id)
   DB.execute(query, id)
 end
 
+def find_artist_by_name(artist_name)
+  query = <<-SQL
+    SELECT artists.id
+    FROM artists
+    WHERE artists.name like ?
+  SQL
+  DB.execute(query, "%#{artist_name}%")[0]
+end
+
+def find_track_by_name(track_name)
+  query = <<-SQL
+    SELECT tracks.id
+    FROM tracks
+    WHERE tracks.name like ?
+  SQL
+  DB.execute(query, "%#{track_name}%")[0]
+end
+
 def display_albums(id)
   query = <<-SQL
     SELECT albums.title as alb, albums.id
