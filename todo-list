@@ -1,0 +1,5 @@
+TODO 
+  optimize scrapping using artist name
+  correct playlist bug by verifying if the video is a playlist
+  fix special characters bug
+  add last-fm api with album covers
